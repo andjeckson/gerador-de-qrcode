@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3546FF">
+    <link rel="shortcut icon" href="assets/img/Logo.png" type="image/png" />
+    <title>Gerar qr code</title>
+    <link rel="stylesheet" href="assets/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+ 
+  <section class="abertura">
+    <img src="assets/img/Logo.png" alt="" class="logo">
+    <h1 class="titulo">QR Code</h1>
+    <p class="desenvolvedor">Projetado por Andjeckson</p>
+ </section>
+ 
+ <div class="app">
+    <header class="app-bar">
+       <i class="bx bx-qr"></i>
+       <p>Gerador de QR Code</i></p>
+       <i class="bx" id="btn-modo-escuro"></i>
+    </header>
+    
+     <section class="apresentacao">
+       <h1>
+         <span><mark>Crie QR Code</mark></span>
+         <span>de forma simples</span>
+         <span>e rápida.</span>
+      </h1>
+      
+     <div class="flexbox"> 
+       <button type="button" id="btn-scroll">
+            <i class="bx bx-play"></i>
+            <span>Começar</span>
+        </button>
+     </div>
+     
+     <div class="ilustracao">
+        <img src="assets/img/Escritorio.svg" alt="">
+     </div>
+   </section>
+     <!--=====PERSONALIZAÇÃO=====-->
+    <section class="personalizacao"> 
+           <h2 class="subtitulo">
+              <i class="bx bx-paint-roll"></i>
+              <span>Personalize seu QR Code:</span>
+           </h2>
+            <!-- CONTEÚDO -->
+            <div class="conteudo"> 
+              <h4>
+                <i class="bx bx-text"></i>
+                <span>Conteúdo:</span>
+              </h4>
+              <div class="caixa-de-texto">
+                 <label>
+                   <input type="text"
+                          placeholder="Digite ou cole algum texto…" id="input"
+                          required>
+                 </label>
+              </div>
+           </div>
+            <!-- COR PRINCIPAL -->
+          <div class="cor-principal">
+             <h4>
+                <i class="bx bx-palette"></i>
+                <span>Cor principal:</span>
+             </h4>
+             <div class="paleta">
+               <!-- Os blocos de cores ficam aqui -->
+             </div>
+          </div>
+           <!--UPLOAD LOGO-->
+            <div class="upload-logo">
+               <h4>
+                  <i class="bx bxs-file-image"></i>
+                  <span>Logo</span>
+                </h4> 
+                
+                <label class="label-file">
+                   <input type="file"
+                          accept="image/*"
+                          id="upload-image">
+                   <i class="bx bxs-file-image"></i>
+                   
+                   <span>Nenhuma imagem selecionada. Toque para importar.</span>
+                   
+                     <img src="" alt="" id="imagem-preview">
+                     <i class="bx bx-x"></i>
+                </label>
+            </div>
+             <button id="btn-submit">
+                   <i class="bx bx-sync"></i>
+                   <span>Gerar QR Code</span>
+             </button>
+    </section>
+</div>
+ 
+ <!--=====MODAL=====-->
+ <dialog class="modal">
+     <form method="dialog">
+        <header>
+           <h3>Seu qr code</h3>
+        </header>
+        <div id="qrcode"></div>
+        <div class="acoes">
+           <button type="submit" id="">
+              <i class="bx bx-x"></i>
+              <span>Fechar</span>
+            </button>
+           <button type="submit" class="baixar" id="btn-download">
+              <i class="bx bx-download"></i>
+              <span>Baixar</span>
+            </button>
+        </div>
+    </form> 
+ </dialog>
+ 
+ <footer>
+    <h2>© Andjeckson</h2>
+    <p>Gerador de QR Code</p>
+ </footer>
+ 
+ <script src='assets/scrollreveal/js/scrollreveal.js'></script>
+ 
+  <script src="assets/easyqrcodejs/js/easy.qrcode.min.js" type="text/javascript" charset="UTF-8"></script>
+  
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
